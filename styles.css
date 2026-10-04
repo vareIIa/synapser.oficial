@@ -87,7 +87,7 @@ a { font: inherit; }
   align-items: center;
   justify-content: center;
   gap: clamp(18px, 2.8vw, 28px);
-  width: min(780px, 100%);
+  width: min(920px, 100%);
   pointer-events: auto;
   animation: slideDown 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -377,6 +377,23 @@ a { font: inherit; }
   font-weight: 400;
   line-height: 1.55;
 }
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px 18px;
+}
+
+.quiet {
+  color: #d0d0d0;
+  font-size: 14.5px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.quiet:hover { color: #fff; }
 
 .cta {
   display: inline-flex;
