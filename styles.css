@@ -67,6 +67,7 @@ a { font: inherit; }
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  filter: grayscale(1) contrast(1.08);
 }
 
 .header {
