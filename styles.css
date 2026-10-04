@@ -454,16 +454,46 @@ a { font: inherit; }
 }
 
 .lower {
+  display: grid;
   position: relative;
   z-index: 1;
-  background-color: #000;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
-    url("assets/synapse-face.webp");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
+  width: 100%;
+  background: transparent;
+}
+
+.lower-photo,
+.lower-shade,
+.lower-copy {
+  grid-area: 1 / 1;
+}
+
+.lower-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  aspect-ratio: 2688 / 6336;
+  align-self: end;
+  justify-self: stretch;
+  object-fit: contain;
+  object-position: center bottom;
+  z-index: 0;
+}
+
+.lower-shade {
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.72);
+  pointer-events: none;
+}
+
+.lower-copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  min-height: 100%;
 }
 
 .chapter {
@@ -542,6 +572,11 @@ a { font: inherit; }
   gap: clamp(16px, 2.4vw, 32px);
   align-items: center;
   margin-top: clamp(36px, 6vh, 64px);
+  padding: clamp(18px, 2.2vw, 28px);
+  border: 1px solid rgba(228, 194, 122, 0.38);
+  border-radius: 22px;
+  background: #000;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
 
 .stage-mark {
@@ -562,11 +597,10 @@ a { font: inherit; }
   flex-direction: column;
   gap: 22px;
   min-width: 0;
-  padding: 22px 20px 18px;
-  border-radius: 22px;
-  background: rgba(0, 0, 0, 0.58);
-  backdrop-filter: blur(10px);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  padding: 22px 22px 18px;
+  border-radius: 18px;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .board-item + .board-item {
@@ -792,22 +826,33 @@ a { font: inherit; }
 
 .colophon {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding: 12px 20px 64px;
-  background: transparent;
-  color: var(--muted);
+  width: 100%;
+  margin-top: auto;
+  padding: 88px 24px 48px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.28) 46%, rgba(0, 0, 0, 0) 100%);
+  color: #f3f3f3;
   text-align: center;
+}
+
+.colophon::before {
+  content: "";
+  width: 64px;
+  height: 1px;
+  background: rgba(228, 194, 122, 0.75);
 }
 
 .colophon p {
   max-width: 28em;
   margin: 0;
-  font-size: 14px;
+  color: #f3f3f3;
+  font-size: 15px;
   line-height: 1.5;
+  text-shadow: 0 1px 2px #000, 0 8px 24px rgba(0, 0, 0, 0.85);
 }
 
 .anim {
