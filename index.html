@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>Synapse</title>
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <meta
+      name="description"
+      content="O Synapse reúne no seu computador toda inteligência que passa por ele. O Synapser continua o trabalho em outra, e só envia quando você confirma."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://db.onlinewebfonts.com/c/8cb707a9b8a7403336b861c3074?family=BubbledotICG-FinePos" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260809_012548_ef22562c-c0ae-4816-ad9d-f8922af4e6a7.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+
+    <header class="header">
+      <div class="bar">
+        <a class="logo" href="#topo" aria-label="Synapse, início">
+          <img src="assets/logo.webp" alt="" width="52" height="52" />
+        </a>
+        <nav class="nav" aria-label="Seções">
+          <a href="#topo" data-nav="topo" class="active" aria-current="page">Início</a>
+          <a href="#synapse" data-nav="synapse">Synapse</a>
+          <a href="#synapser" data-nav="synapser">Synapser</a>
+          <a href="#bandeja" data-nav="bandeja">Programa</a>
+        </nav>
+        <a class="local-pill" href="#bandeja">Começar</a>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-screen" id="topo" data-section="topo">
+        <div class="hero">
+          <div class="trust anim" style="--d: 0.05s">
+            <span class="avatar a1" title="Claude"><img src="assets/brands/claude.svg" alt="Claude" /></span>
+            <span class="avatar a2" title="Grok"><img src="assets/brands/grok-icon.svg" alt="Grok" /></span>
+            <span class="avatar a3" title="Codex"><img src="assets/brands/openai.svg" alt="Codex" /></span>
+            <span class="avatar a4" title="Hermes"><img src="assets/brands/hermes.svg" alt="Hermes" /></span>
+            <span class="avatar a5" title="E outras"><span class="plus">+</span></span>
+            <p class="trust-pill">Toda IA no seu computador</p>
+          </div>
+
+          <div class="hero-copy">
+            <h1 class="headline anim">
+              <span>Synapse</span>
+              <span>Synapser</span>
+            </h1>
+            <p class="subhead anim" style="--d: 0.28s">
+              Cada inteligência que passa pelo seu computador aparece no Synapse. O Synapser continua esse trabalho em outra inteligência. Nada sai sem a sua confirmação.
+            </p>
+            <a class="cta anim" style="--d: 0.4s" href="#synapser">Continuar um trabalho</a>
+          </div>
+        </div>
+
+        <div class="stats" aria-label="Métricas da plataforma">
+          <article class="stat anim" style="--d: 0.5s">
+            <span class="stat-icon" aria-hidden="true">&lt;</span>
+            <span class="stat-value" data-index="0" data-target="0" data-decimals="0" data-suffix="ms">0ms</span>
+            <span class="stat-label">Tempo de inferência</span>
+          </article>
+          <article class="stat anim" style="--d: 0.58s">
+            <span class="stat-icon" aria-hidden="true">%</span>
+            <span class="stat-value" data-index="1" data-target="99.99" data-decimals="2" data-suffix="%">0,00%</span>
+            <span class="stat-label">Disponibilidade da plataforma</span>
+          </article>
+          <article class="stat anim" style="--d: 0.66s">
+            <span class="stat-icon" aria-hidden="true">*</span>
+            <span class="stat-value" data-index="2" data-target="24" data-decimals="0" data-suffix="/7">0/7</span>
+            <span class="stat-label">Execução autônoma</span>
+          </article>
+          <article class="stat anim" style="--d: 0.74s">
+            <span class="stat-icon" aria-hidden="true">#</span>
+            <span class="stat-value" data-index="3" data-target="2" data-decimals="0" data-suffix="M">0M</span>
+            <span class="stat-label">Janelas de contexto</span>
+          </article>
+        </div>
+      </section>
+
+      <div class="lower">
+      <section class="chapter" id="synapse" data-section="synapse">
+        <div class="stack">
+          <div class="synapse-head">
+            <p class="kicker anim">No seu computador</p>
+            <h2 class="anim" style="--d: 0.06s">Synapse</h2>
+            <p class="lede anim" style="--d: 0.12s">
+              Várias inteligências, várias conversas, nenhum lugar que junte o trabalho. O Synapse percorre o seu computador e encontra cada IA que passa por ele. As de hoje e as que você instalar amanhã entram na mesma mesa.
+            </p>
+          </div>
+          <div class="stage">
+            <article class="board anim" style="--d: 0.16s">
+              <div class="board-item">
+                <span class="beat-n">01</span>
+                <h3>Toda IA que passar</h3>
+                <p>Chat, código, agente, assistente. O que passar pelo seu computador entra no mapa: a que você usa hoje e a próxima que instalar. Uma não precisa autorizar a outra.</p>
+              </div>
+              <div class="board-item">
+                <span class="beat-n">02</span>
+                <h3>Cada conversa no lugar</h3>
+                <p>Cada conversa vira um ponto. Quando uma chama outra para ajudar, as duas ficam ligadas. Você vê quem está falando, quem está ocupado e quem parou.</p>
+              </div>
+            </article>
+            <figure class="stage-mark anim" style="--d: 0.2s">
+              <img src="assets/synapse-figure.webp" alt="Figura da balança, a marca da plataforma." />
+            </figure>
+            <article class="board anim" style="--d: 0.24s">
+              <div class="board-item">
+                <span class="beat-n">03</span>
+                <h3>Busca pelo que foi dito</h3>
+                <p>A busca olha a conversa, não o nome do arquivo. Dá para filtrar por empresa, por modelo e pelo momento: ao vivo, ocupada, em pausa ou offline. O que saiu da tela continua guardado.</p>
+              </div>
+              <div class="board-item">
+                <span class="beat-n">04</span>
+                <h3>O seu original fica</h3>
+                <p>O mapa abre o que já está no seu computador. Não reescreve as conversas. Senhas e chaves ficam de fora.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter" id="synapser" data-section="synapser">
+        <div class="stack">
+          <p class="kicker anim">A ponte</p>
+          <h2 class="anim" style="--d: 0.06s">Synapser</h2>
+          <p class="lede anim" style="--d: 0.12s">
+            Você começou numa inteligência e o próximo passo pede outra. O Synapser leva o contexto. Você confirma. O pedido segue para o ambiente da Synapse, que recebe o trabalho quando ele precisa de IA.
+          </p>
+          <ol class="houses anim" style="--d: 0.16s" aria-label="Exemplos de inteligências, e qualquer outra">
+            <li data-house="anthropic"><span>Anthropic</span><strong>Claude</strong></li>
+            <li data-house="xai"><span>xAI</span><strong>Grok</strong></li>
+            <li data-house="openai"><span>OpenAI</span><strong>Codex</strong></li>
+            <li data-house="nous"><span>Nous</span><strong>Hermes</strong></li>
+            <li data-house="more"><span>E também</span><strong>Qualquer outra</strong></li>
+          </ol>
+          <p class="relay anim" style="--d: 0.2s">
+            Você escolhe a conversa de onde partir. O Synapse leva o que foi dito. A outra continua, numa conversa nova ou na que já estava aberta. Vai o que você pediu e o que a inteligência respondeu. Sem o seu sim, nada atravessa.
+            <q>Contexto trazido pelo Synapse, da sessão. Continue o trabalho a partir desta conversa.</q>
+          </p>
+          <ol class="atlas steps">
+            <li class="anim" style="--d: 0.04s">
+              <span class="beat-n">01</span>
+              <h3>A origem</h3>
+              <p>A conversa já está no seu computador. Entram as suas falas e as respostas. Se o texto for longo demais para o envio, o começo sai e o fim fica. É nele que o trabalho está agora.</p>
+            </li>
+            <li class="anim" style="--d: 0.1s">
+              <span class="beat-n">02</span>
+              <h3>O pedido</h3>
+              <p>Você diz o que quer fazer agora. O Synapser devolve o caminho: qual inteligência, conversa nova ou a que já está aberta, e o texto que vai junto.</p>
+            </li>
+            <li class="anim" style="--d: 0.16s">
+              <span class="beat-n">03</span>
+              <h3>Confirmar</h3>
+              <p>Nada parte antes do seu sim. O pedido chega ao ambiente da Synapse, e a outra inteligência continua o trabalho. A ponte é sua.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="chapter" id="bandeja" data-section="bandeja">
+        <div class="chapter-grid">
+          <div class="chapter-intro">
+            <p class="kicker anim">O programa</p>
+            <h2 class="anim" style="--d: 0.06s">Na bandeja</h2>
+            <p class="lede anim" style="--d: 0.12s">
+              Um ícone de balança ao lado do relógio. A janela abre sem moldura. Com ela fechada, o Synapse continua de olho em toda IA que passa pelo seu computador.
+            </p>
+          </div>
+          <div class="desk anim" style="--d: 0.08s">
+            <div class="desk-bar">
+              <img class="desk-logo" src="assets/logo.webp" alt="" width="28" height="28" />
+              <strong>SYNAPSE</strong>
+              <span class="desk-controls" aria-hidden="true">
+                <svg viewBox="0 0 16 16"><path d="M3 8.5h10" /></svg>
+                <svg viewBox="0 0 16 16"><path d="M3.5 3.5h9v9h-9z" /></svg>
+                <svg viewBox="0 0 16 16"><path d="M4 4l8 8M12 4l-8 8" /></svg>
+              </span>
+            </div>
+            <img class="desk-art" src="assets/synapser-dark.webp" alt="Synapser, a marca sem fundo na janela do programa." />
+            <ol class="beats desk-beats">
+              <li class="beat">
+                <span class="beat-n">01</span>
+                <div>
+                  <h3>Abre do relógio</h3>
+                  <p>O ícone na bandeja abre o Synapse quando você precisa ver o mapa.</p>
+                </div>
+              </li>
+              <li class="beat">
+                <span class="beat-n">02</span>
+                <div>
+                  <h3>Fechar não para</h3>
+                  <p>Fechar só esconde a janela. A leitura da IA no seu computador continua.</p>
+                </div>
+              </li>
+              <li class="beat">
+                <span class="beat-n">03</span>
+                <div>
+                  <h3>Você decide a partida</h3>
+                  <p>Iniciar junto com o Windows fica desligado até você marcar.</p>
+                </div>
+              </li>
+              <li class="beat">
+                <span class="beat-n">04</span>
+                <div>
+                  <h3>Sair é sair</h3>
+                  <p>Sair encerra o programa e a leitura juntos. Nada continua depois que você foi embora.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <footer class="colophon">
+        <a class="logo" href="#topo" aria-label="Voltar ao início">
+          <img src="assets/logo.webp" alt="" width="52" height="52" />
+        </a>
+        <p>Toda inteligência no seu computador. Uma ponte, e ela espera você.</p>
+      </footer>
+      </div>
+    </main>
+
+    <div class="overlay" hidden></div>
+    <nav id="mobile-menu" class="sheet" hidden aria-label="Menu">
+      <a href="#topo" data-nav="topo" class="active" aria-current="page">Início</a>
+      <a href="#synapse" data-nav="synapse">Synapse</a>
+      <a href="#synapser" data-nav="synapser">Synapser</a>
+      <a href="#bandeja" data-nav="bandeja">Programa</a>
+      <a class="sheet-local" href="#bandeja">Começar</a>
+    </nav>
+
+    <script src="main.js"></script>
+  </body>
+</html>
