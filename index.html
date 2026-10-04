@@ -39,7 +39,7 @@
           <a href="#synapser" data-nav="synapser">Synapser</a>
           <a href="#bandeja" data-nav="bandeja">Programa</a>
         </nav>
-        <a class="local-pill" href="https://github.com/vareIIa/synapser.oficial/releases/latest/download/Synapser-Setup.exe">Baixar</a>
+        <a class="local-pill" href="#planos">Baixar</a>
         <a class="local-pill" href="https://x.com/synapseroficial" target="_blank">Contate-nos via X</a>
         <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
           <span></span>
@@ -71,7 +71,7 @@
               Cada inteligência que passa pelo seu computador aparece no Synapse. O Synapser continua esse trabalho em outra inteligência. Nada sai sem a sua confirmação.
             </p>
             <div class="hero-actions">
-              <a class="cta anim" style="--d: 0.4s" href="https://github.com/vareIIa/synapser.oficial/releases/latest/download/Synapser-Setup.exe">Baixar para Windows</a>
+              <a class="cta anim" style="--d: 0.4s" href="#planos">Baixar para Windows</a>
               <a class="quiet anim" style="--d: 0.48s" href="#synapser">Continuar um trabalho</a>
             </div>
           </div>
@@ -237,6 +237,69 @@
           </div>
         </div>
       </section>
+      <section class="chapter plans" id="planos" data-section="planos">
+        <div class="stack">
+          <p class="kicker anim">Planos</p>
+          <h2 class="anim" style="--d: 0.06s">Free, Pro e Max</h2>
+          <p class="lede anim" style="--d: 0.12s">O Free lê o seu computador. O Synapser, que usa o GPT-6 Luna, entra no Pro e no Max. Os dois escolhem o esforço. O Max consome mais tokens.</p>
+          <div class="plan-grid">
+            <article class="plan anim" style="--d: 0.16s">
+              <p class="plan-name">Free</p>
+              <p class="plan-price">US$ 0</p>
+              <ul>
+                <li>Mapa de toda IA no seu computador</li>
+                <li>Busca pelo que foi dito</li>
+                <li>Sem Synapser</li>
+              </ul>
+              <a class="plan-go" href="https://github.com/vareIIa/synapser.oficial/releases/latest/download/Synapser-Setup.exe">Baixar grátis</a>
+            </article>
+            <article class="plan plan-pro anim" style="--d: 0.22s">
+              <p class="plan-name">Pro</p>
+              <p class="plan-price">US$ 9,90</p>
+              <ul>
+                <li>Tudo do Free</li>
+                <li>Synapser com GPT-6 Luna</li>
+                <li>Seleção de esforço</li>
+                <li>200 mil tokens</li>
+              </ul>
+              <button class="plan-go" type="button" data-checkout="pro">Assinar Pro</button>
+            </article>
+            <article class="plan plan-max anim" style="--d: 0.28s">
+              <p class="plan-name">Max</p>
+              <p class="plan-price">US$ 19,90</p>
+              <ul>
+                <li>Tudo do Pro</li>
+                <li>A mesma seleção de esforço</li>
+                <li>1 milhão de tokens</li>
+              </ul>
+              <button class="plan-go" type="button" data-checkout="max">Assinar Max</button>
+            </article>
+          </div>
+          <div class="pay" id="pagamento" hidden>
+            <div class="pay-head">
+              <p class="kicker">Pagamento</p>
+              <h3 id="pay-title">Pro</h3>
+              <p class="pay-amount" id="pay-amount">US$ 9,90</p>
+            </div>
+            <div class="pay-tabs" role="tablist" aria-label="Forma de pagamento">
+              <button type="button" class="pay-tab" role="tab" id="tab-pix" aria-selected="true" aria-controls="pay-pix">PIX</button>
+              <button type="button" class="pay-tab" role="tab" id="tab-card" aria-selected="false" aria-controls="pay-card">Cartão</button>
+            </div>
+            <div class="pay-pane" id="pay-pix" role="tabpanel" aria-labelledby="tab-pix">
+              <p>Envie um PIX para o telefone abaixo. O valor cai nesta chave.</p>
+              <p class="pix-key" id="pix-key">31 98597-5200</p>
+              <button class="plan-go" type="button" id="pix-copy">Copiar chave</button>
+              <p class="pay-note" id="pix-note" role="status"></p>
+            </div>
+            <div class="pay-pane" id="pay-card" role="tabpanel" aria-labelledby="tab-card" hidden>
+              <p>O cartão também paga esta chave. No app do banco, escolha pagar um PIX com cartão e use o mesmo telefone. O Synapser não guarda número de cartão.</p>
+              <p class="pix-key">31 98597-5200</p>
+              <button class="plan-go" type="button" id="card-copy">Copiar chave</button>
+              <p class="pay-note" id="card-note" role="status"></p>
+            </div>
+          </div>
+        </div>
+      </section>
       <footer class="colophon">
         <a class="logo" href="#topo" aria-label="Voltar ao início">
           <img src="assets/logo.webp" alt="" width="52" height="52" />
@@ -253,7 +316,7 @@
       <a href="#synapse" data-nav="synapse">Synapse</a>
       <a href="#synapser" data-nav="synapser">Synapser</a>
       <a href="#bandeja" data-nav="bandeja">Programa</a>
-      <a class="sheet-local" href="https://github.com/vareIIa/synapser.oficial/releases/latest/download/Synapser-Setup.exe">Baixar para Windows</a>
+      <a class="sheet-local" href="#planos">Baixar para Windows</a>
     </nav>
 
     <script src="main.js"></script>
