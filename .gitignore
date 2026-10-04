@@ -1,4 +1,7 @@
 .vercel
+node_modules
+.env
+.env.local
 Thumbs.db
 Desktop.ini
 *.log

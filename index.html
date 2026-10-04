@@ -39,6 +39,7 @@
           <a href="#synapser" data-nav="synapser">Synapser</a>
           <a href="#bandeja" data-nav="bandeja">Programa</a>
         </nav>
+        <button class="local-pill" type="button" id="open-account">Entrar</button>
         <a class="local-pill" href="#planos">Baixar</a>
         <a class="local-pill" href="https://x.com/synapseroficial" target="_blank">Contate-nos via X</a>
         <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
@@ -282,21 +283,21 @@
               <h3 id="pay-title">Pro</h3>
               <p class="pay-amount" id="pay-amount">US$ 9,90</p>
             </div>
-            <div class="pay-tabs" role="tablist" aria-label="Forma de pagamento">
-              <button type="button" class="pay-tab" role="tab" id="tab-pix" aria-selected="true" aria-controls="pay-pix">PIX</button>
-              <button type="button" class="pay-tab" role="tab" id="tab-card" aria-selected="false" aria-controls="pay-card">Cartão</button>
-            </div>
-            <div class="pay-pane" id="pay-pix" role="tabpanel" aria-labelledby="tab-pix">
-              <p>Envie um PIX para o telefone abaixo. O valor cai nesta chave.</p>
-              <p class="pix-key" id="pix-key">31 98597-5200</p>
-              <button class="plan-go" type="button" id="pix-copy">Copiar chave</button>
-              <p class="pay-note" id="pix-note" role="status"></p>
-            </div>
-            <div class="pay-pane" id="pay-card" role="tabpanel" aria-labelledby="tab-card" hidden>
-              <p>O cartão também paga esta chave. No app do banco, escolha pagar um PIX com cartão e use o mesmo telefone. O Synapser não guarda número de cartão.</p>
-              <p class="pix-key">31 98597-5200</p>
-              <button class="plan-go" type="button" id="card-copy">Copiar chave</button>
-              <p class="pay-note" id="card-note" role="status"></p>
+            <form class="pay-form" id="pay-form">
+              <label>CPF<input name="cpf" inputmode="numeric" autocomplete="off" required /></label>
+              <label>Celular<input name="phone" inputmode="tel" autocomplete="tel" required /></label>
+              <div class="pay-tabs" role="tablist" aria-label="Forma de pagamento">
+                <button type="button" class="pay-tab" id="tab-pix" aria-selected="true">PIX</button>
+                <button type="button" class="pay-tab" id="tab-card" aria-selected="false">Cartão</button>
+              </div>
+              <p class="pay-help" id="pay-help">O PIX gera um QR Code do PagBank. O cartão abre o checkout do PagBank. O plano só libera quando o pagamento consta como pago.</p>
+              <button class="plan-go" type="submit" id="pay-submit">Gerar pagamento</button>
+              <p class="pay-note" id="pay-note" role="status"></p>
+            </form>
+            <div class="pay-result" id="pay-result" hidden>
+              <img id="pay-qr" alt="QR Code do PIX" hidden />
+              <p id="pay-copy" class="pix-code" hidden></p>
+              <p class="pay-note" id="pay-status">Aguardando o PagBank confirmar.</p>
             </div>
           </div>
         </div>
@@ -318,8 +319,30 @@
       <a href="#synapser" data-nav="synapser">Synapser</a>
       <a href="#bandeja" data-nav="bandeja">Programa</a>
       <a class="sheet-local" href="#planos">Baixar para Windows</a>
+      <button class="sheet-local" type="button" id="open-account-sheet">Entrar</button>
     </nav>
 
+    <dialog class="account" id="account">
+      <form method="dialog" class="account-card" id="account-form">
+        <p class="kicker" id="account-kicker">Conta</p>
+        <h2 id="account-title">Entrar</h2>
+        <p class="account-lead" id="account-lead">A mesma conta libera o plano no site e no programa.</p>
+        <div id="account-fields">
+          <label id="account-name-label">Nome<input name="name" autocomplete="name" /></label>
+          <label>E-mail<input name="email" type="email" autocomplete="email" required /></label>
+          <label>Senha<input name="password" type="password" autocomplete="current-password" minlength="8" required /></label>
+        </div>
+        <p class="account-user" id="account-user" hidden></p>
+        <p class="pay-note" id="account-note" role="status"></p>
+        <div class="account-actions">
+          <button class="plan-go" type="submit" id="account-submit">Entrar</button>
+          <button class="quiet account-switch" type="button" id="account-switch">Criar conta</button>
+          <button class="quiet" type="button" id="account-close">Fechar</button>
+        </div>
+      </form>
+    </dialog>
+
     <script src="main.js"></script>
+    <script src="account.js"></script>
   </body>
 </html>
