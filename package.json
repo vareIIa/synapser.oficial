@@ -1,9 +1,6 @@
 {
   "private": true,
   "type": "module",
-  "scripts": {
-    "test": "node --test lib/account-role.test.js"
-  },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.1"
   }

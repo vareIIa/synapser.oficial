@@ -20,7 +20,7 @@ export default async function handler(req, res) {
     const id = randomUUID();
     await sql`insert into users (id, name, email, password_hash) values (${id}, ${name}, ${email}, ${hashPassword(password)})`;
     const token = await openSession(res, id);
-    return json(res, 201, { token, user: { id, name, email, plan: "free", role: "user" } });
+    return json(res, 201, { token, user: { id, name, email, plan: "free" } });
   } catch (error) {
     return json(res, error.status || 500, { error: error.message || "Não foi possível criar a conta." });
   }

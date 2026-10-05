@@ -5,5 +5,3 @@ node_modules
 Thumbs.db
 Desktop.ini
 *.log
-
-.env*
