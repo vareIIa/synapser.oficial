@@ -59,7 +59,9 @@ function paintAccount(user) {
   }
   button.textContent = user.name.split(" ")[0];
   accountTitle.textContent = user.name;
-  accountLead.textContent = user.plan === "free" ? "Plano Free. O Synapser entra no Pro ou no Max." : `Plano ${user.plan === "max" ? "Max" : "Pro"} liberado.`;
+  accountLead.textContent = user.role === "admin"
+    ? "Admin. O Synapser usa a chave GPT-6 Luna guardada neste PC."
+    : user.plan === "free" ? "Plano Free. O Synapser entra no Pro ou no Max." : `Plano ${user.plan === "max" ? "Max" : "Pro"} liberado.`;
   accountUser.hidden = false;
   accountUser.textContent = user.email;
   accountFields.hidden = true;
